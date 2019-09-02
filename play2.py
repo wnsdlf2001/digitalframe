@@ -32,13 +32,6 @@ if __name__ == "__main__":
     PIR_PIN = 7
 
     GPIO.setup(PIR_PIN, GPIO.IN)
-
-    path = "/home/pi/Downloads/gifimages/"
-    os.chdir(path)
-    imgFiles = sorted((fn for fn in os.listdir('.') if fn.endswith('.jpg')))
-    images = []
-    imageresize(imgFiles, 1024, 512)
-    image2gif(imgFiles, 10)
     
     # kill a previous fbi process.
     os.system('sudo pkill gpicview')
@@ -54,18 +47,5 @@ if __name__ == "__main__":
         count +=1
     # execute the fbi.
     #os.system('sudo fbi -a -T 2 -t 30 -noverbose `find /home/pi/Downloads/gifimages/ -iname "*.gif"`')
-    os.system('sudo gpicview `find /home/pi/Downloads/gifimages/ -iname "*.gif"`')
-    count = 0
-    while count < 10:
-        GPIO.output(27,GPIO.HIGH)
-        time.sleep(0.05)
-        GPIO.output(27,GPIO.LOW)
-        time.sleep(0.05)
-        GPIO.output(17,GPIO.HIGH)
-        time.sleep(0.05)
-        GPIO.output(17,GPIO.LOW)
-        time.sleep(0.05)
-        count +=1  
-
-       
+    os.system('sudo gpicview `find /home/pi/Downloads/Apps/gifimages/ -iname "*.gif"`')
 

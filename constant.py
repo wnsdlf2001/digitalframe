@@ -8,13 +8,19 @@ You must modify CONST_TOKEN value for your dropbox application.
 """
 
 #Dropbox OAuth2 access token
-CONST_TOKEN = 'mkyiW-IvZuAAAAAAAAAAN2Dn3FePJgjAJiM9_EvewYKMd1mmMBlkq6gkddBjeJNz'
+CONST_TOKEN = 'mkyiW-IvZuAAAAAAAAAAVhndKJRv-Pnz89hK4K5j14h0ObI47fKVS2i1KYE6ynsy'
 
 #The directory name for saved images. 
-CONST_IMG_DIR_NAME = 'images'
+CONST_IMG_DIR_NAME = 'Apps/images'
 
 #the directory name for GIF images.
-CONST_GIFIMG_DIR_NAME = 'gifimages'
+CONST_GIFIMG_DIR_NAME = 'Apps/gifimages'
+
+CONST_LOCAL_IMG_DIR_NAME = 'Apps/images'
+
+CONST_LOCAL_GIFIMG_DIR_NAME = 'Apps/gifimages'
+
+CONST_CALL_LOG = 'Apps/Automatic Call Recorder/Records'
 
 #The directory name for uploading.
 CONST_UPLOAD_DIR_NAME = 'uploads'
